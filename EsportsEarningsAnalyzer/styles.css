@@ -1,0 +1,192 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: url('background.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in;
+}
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  color: #b19cd9;
+  text-shadow: 0 0 8px #b19cd9;
+}
+header p {
+  font-size: 1em;
+  color: #ddd;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(20, 20, 20, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(177, 156, 217, 0.5);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 12px 25px;
+  border: 3px solid #b19cd9;
+  background: #1f1f3a;
+  color: #b19cd9;
+  font-size: 0.8em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-family: Verdana, sans-serif; /* Added Verdana for buttons */
+}
+.btn:hover {
+  background: #b19cd9;
+  color: #fff;
+  transform: scale(1.05);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Export Options */
+.export-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.export-btn {
+  padding: 10px 20px;
+  border: 2px solid #b19cd9;
+  background: #1f1f3a;
+  color: #b19cd9;
+  font-size: 0.8em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-family: Verdana, sans-serif; /* Added Verdana for export buttons */
+}
+.export-btn:hover {
+  background: #b19cd9;
+  color: #fff;
+  transform: scale(1.05);
+}
+.export-btn:active {
+  transform: scale(0.98);
+}
+
+/* Slider Container */
+.slider-container, .manual-threshold {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.slider-label {
+  font-size: 0.8em;
+  color: #b19cd9;
+}
+#topNSlider {
+  width: 100px;
+}
+.fixed-value {
+  display: inline-block;
+  min-width: 120px; /* Increase as needed for larger numbers */
+  white-space: nowrap; /* Prevents wrapping */
+  text-align: right;
+  margin-left: 10px; /* Optional: add spacing between slider and value */
+}
+
+
+/* Style for manual threshold input */
+.manual-threshold input[type="number"] {
+  width: 100px;
+  padding: 5px;
+  border: 2px solid #b19cd9;
+  background: #1f1f3a;
+  color: #b19cd9;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+/* Hide manual threshold container by default */
+.hidden {
+  display: none;
+}
+
+/* Error Message */
+.error-message {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ff5555;
+  font-size: 0.8em;
+}
+
+/* Chart Wrapper and Container */
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chart-container {
+  position: relative;
+  width: 600px;  /* Fixed width for centering */
+  height: 500px; /* Container size remains */
+  border: 2px solid rgb(177, 156, 217);
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(50,50,100,0.5), rgba(70,70,120,0.5));
+}
+
+/* Center the canvas and make it fill the container */
+.chart-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  margin: auto;
+}
+
+/* Summary */
+.summary {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(20, 20, 20, 0.7);
+  border-radius: 8px;
+  font-size: 0.8em;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  transition: max-height 0.3s ease;
+  color: antiquewhite;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.7em;
+  color: #ffffff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

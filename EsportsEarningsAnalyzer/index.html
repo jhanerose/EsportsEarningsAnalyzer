@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esports Earnings Distribution</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Font for Pixelated look -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Esports Earnings Distribution</h1>
+    <p>Comparing Total Money Distribution per Esports Title</p>
+  </header>
+  <main>
+    <div class="controls">
+      <button id="importBtn" class="btn">Upload File</button>
+      <button id="exportBtn" class="btn">Export Data</button>
+      <button id="toggleSummaryBtn" class="btn">Toggle Summary</button>
+      <button id="toggleOthersBtn" class="btn">Show Others</button>
+      <div class="slider-container">
+        <label for="topNSlider" class="slider-label">Filter:</label>
+        <input type="range" id="topNSlider" min="0" max="20" value="10">
+        <span id="topNValue" class="fixed-value">10</span>
+      </div>
+      <div id="manualThreshold" class="manual-threshold hidden">
+        <label for="thresholdInput" class="slider-label">Threshold:</label>
+        <input type="number" id="thresholdInput" min="0" value="0">
+      </div>
+      <input type="file" id="fileInput" accept=".csv" hidden>
+    </div>
+    
+    <!-- New export options container (initially hidden) -->
+    <div id="exportOptions" class="export-options hidden">
+      <button id="exportCSV" class="btn export-btn">CSV</button>
+      <button id="exportJPEG" class="btn export-btn">JPEG</button>
+      <button id="exportPNG" class="btn export-btn">PNG</button>
+    </div>
+    
+    <div id="errorMessage" class="error-message"></div>
+    <div class="chart-wrapper">
+      <div class="chart-container">
+        <canvas id="esportsChart"></canvas>a
+      </div>
+    </div>
+    <div class="summary" id="summaryContainer">
+      <pre id="summaryText">Please upload a Esports Analytics file to see the data.</pre>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; Jhane Rose Sadicon | Esports Analytics</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
